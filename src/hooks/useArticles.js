@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 
-const API_URL = process.env.API_URL || 'https://newsapi.org';
-const API_KEY = process.env.API_KEY || '8e18b51f589c42c98931973cefd17f09';
+const API_URL = process.env.REACT_APP_API_URL || 'https://newsapi.org';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default function useArticles() {
   const fetcher = (...args) => fetch(...args).then(async res => {
