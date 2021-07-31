@@ -1,6 +1,9 @@
-import { Box, Image, Link, Text } from '@chakra-ui/react';
-import moment from 'moment';
 import * as React from 'react';
+import moment from 'moment';
+import { Box, Image, Link, Text } from '@chakra-ui/react';
+
+const PLACEHOLDER_IMAGE =
+  'https://temp.media/?height=390&width=780&text=No_Image&category=&color=';
 
 export default function ArticleCard({
   imageUrl,
@@ -21,15 +24,19 @@ export default function ArticleCard({
       {...rest}
     >
       <Link href={sourceUrl} target="_blank">
-        <Image src={imageUrl} alt={title} />
+        <Image
+          src={imageUrl}
+          alt={title}
+          objectFit="cover"
+          fallbackSrc={PLACEHOLDER_IMAGE}
+        />
       </Link>
       <Box p="6">
         <Box
-          color="gray.500"
+          color="grey.400"
           fontWeight="semibold"
           letterSpacing="wide"
           fontSize="xs"
-          textTransform="uppercase"
         >
           Published on {moment(createdAt).format('MMMM DD, YYYY')} &bull; Source{' '}
           <Link href={sourceUrl}>{sourceName}</Link>

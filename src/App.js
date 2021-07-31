@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 
+import { useTheme } from "./theme";
 import Articles from './pages/Articles';
 import About from './pages/About';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={useTheme}>
       <BrowserRouter>
         <Switch>
           <Route path="/" component={Articles} exact />

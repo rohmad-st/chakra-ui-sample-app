@@ -24,7 +24,7 @@ export default function Articles() {
     <Flex
       my="4"
       width="100vw"
-      flexDir="column"
+      direction="column"
       align="center"
       justify="center"
       gridGap={8}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 
 export default function About() {
   return (
@@ -25,6 +25,7 @@ export default function About() {
           tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
           amet adipiscing sem neque sed ipsum.
         </Text>
+        <Button variant="primary">Button Red 500</Button>
       </Box>
     </Flex>
   );
